@@ -28,8 +28,8 @@ export default function Hero() {
                 <div className="absolute bottom-20 left-10 w-72 h-72 bg-[var(--color-secondary)]/10 rounded-full blur-[80px] z-0"></div>
 
                 {/* Content */}
-                <div className="container-custom relative z-10 pt-28 pb-20">
-                    <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="container-custom relative z-10 pt-44 pb-16">
+                    <div className="grid lg:grid-cols-12 gap-8 xl:gap-10 items-center">
                         {/* Text Content */}
                         <div className="lg:col-span-7">
                             <motion.div
@@ -37,7 +37,7 @@ export default function Hero() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-[var(--color-accent-light)] text-sm font-medium mb-8">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-[var(--color-accent-light)] text-sm font-medium mb-6">
                                     <Award size={14} />
                                     <span>Médico Especialista en Diagnóstico por Imágenes</span>
                                 </div>
@@ -47,7 +47,7 @@ export default function Hero() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.1 }}
-                                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-[0.95] tracking-tight"
+                                className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 leading-[1] tracking-tight"
                             >
                                 Dr. Cristian{' '}
                                 <span className="text-gradient-gold block mt-2">
@@ -59,7 +59,7 @@ export default function Hero() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className="text-lg sm:text-xl text-white/70 mb-10 max-w-xl leading-relaxed"
+                                className="text-base sm:text-lg xl:text-xl text-white/70 mb-8 max-w-xl leading-relaxed"
                             >
                                 Precisión diagnóstica con tecnología de última generación.
                                 Comprometido con tu salud y bienestar a través de la imagenología avanzada.
@@ -91,7 +91,7 @@ export default function Hero() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.5 }}
-                                className="flex flex-wrap gap-8 mt-16 pt-10 border-t border-white/10"
+                                className="flex flex-wrap gap-6 xl:gap-8 mt-10 pt-6 border-t border-white/10"
                             >
                                 {[
                                     { icon: <Clock size={18} />, value: '10+', label: 'Años de Experiencia' },
@@ -124,7 +124,7 @@ export default function Hero() {
                                     <img
                                         src="/imagen1.jpeg"
                                         alt="Dr. Cristian Machado Otero"
-                                        className="w-full h-[600px] object-cover object-top"
+                                        className="w-full h-[450px] xl:h-[500px] object-cover object-top"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/60 via-transparent to-transparent"></div>
                                 </div>
