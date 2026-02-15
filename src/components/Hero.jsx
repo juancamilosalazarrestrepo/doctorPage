@@ -88,7 +88,7 @@ export default function Hero() {
                             className="flex flex-wrap gap-8 mt-16 pt-10 border-t border-white/10"
                         >
                             {[
-                                { icon: <Clock size={18} />, value: '15+', label: 'Años de Experiencia' },
+                                { icon: <Clock size={18} />, value: '10+', label: 'Años de Experiencia' },
                                 { icon: <Users size={18} />, value: '5,000+', label: 'Pacientes Atendidos' },
                                 { icon: <Award size={18} />, value: '100%', label: 'Compromiso' },
                             ].map((stat, i) => (

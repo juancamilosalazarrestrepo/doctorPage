@@ -60,7 +60,7 @@ export default function About() {
                                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                                 className="absolute top-6 -right-4 z-20 bg-gradient-to-br from-[var(--color-accent)] to-[#D4B85A] rounded-2xl p-4 shadow-[var(--shadow-gold)]"
                             >
-                                <p className="text-3xl font-bold text-[var(--color-primary)]">15+</p>
+                                <p className="text-3xl font-bold text-[var(--color-primary)]">10+</p>
                                 <p className="text-xs font-semibold text-[var(--color-primary)]/70 uppercase tracking-wider">Años</p>
                             </motion.div>
                         </div>
