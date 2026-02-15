@@ -73,7 +73,7 @@ export default function Contact() {
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                                 className="flex items-start gap-4 p-5 rounded-2xl bg-[var(--color-bg)] hover:bg-[var(--color-bg-warm)] transition-colors group"
                             >
-                                <div className="w-11 h-11 rounded-xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)] group-hover:to-[#D4B85A] group-hover:text-[var(--color-primary)] transition-all shrink-0">
+                                <div className="w-11 h-11 rounded-xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)] group-hover:to-[#7EC8E3] group-hover:text-white transition-all shrink-0">
                                     {info.icon}
                                 </div>
                                 <div>

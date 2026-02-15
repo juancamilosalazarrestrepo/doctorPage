@@ -11,9 +11,10 @@ export default function Hero() {
                 <img
                     src="/imagen10.jpeg"
                     alt="Dr. Cristian Machado"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[50%_0%]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/95 via-[var(--color-primary)]/80 to-[var(--color-primary)]/40"></div>
+                <div className="absolute inset-0 bg-[var(--color-primary)]/60"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-transparent opacity-60"></div>
             </div>
 
@@ -67,10 +68,10 @@ export default function Hero() {
                         >
                             <a
                                 href="#contact"
-                                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#D4B85A] text-[var(--color-primary)] px-8 py-4 rounded-2xl font-bold text-base shadow-[var(--shadow-gold)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#7EC8E3] text-white px-8 py-4 rounded-2xl font-bold text-base shadow-[var(--shadow-gold)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                             >
                                 Agendar Cita
-                                <span className="w-6 h-6 bg-[var(--color-primary)]/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">→</span>
+                                <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">→</span>
                             </a>
                             <a
                                 href="#about"
@@ -130,8 +131,8 @@ export default function Hero() {
                                 className="absolute -bottom-6 -left-6 z-20 glass-dark rounded-2xl p-4 pr-8"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-[var(--color-accent)] to-[#D4B85A] rounded-xl flex items-center justify-center">
-                                        <Award size={22} className="text-[var(--color-primary)]" />
+                                    <div className="w-12 h-12 bg-gradient-to-br from-[var(--color-accent)] to-[#7EC8E3] rounded-xl flex items-center justify-center">
+                                        <Award size={22} className="text-white" />
                                     </div>
                                     <div>
                                         <p className="text-white font-bold text-sm">Especialista Certificado</p>

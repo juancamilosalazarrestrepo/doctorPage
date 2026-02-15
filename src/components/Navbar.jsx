@@ -28,16 +28,16 @@ export default function Navbar() {
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className={`fixed w-full z-50 transition-all duration-500 ${scrolled
-                    ? 'py-3 bg-white/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(11,29,53,0.08)] border-b border-gray-100'
-                    : 'py-5 bg-transparent'
+                ? 'py-3 bg-white/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(11,29,53,0.08)] border-b border-gray-100'
+                : 'py-5 bg-transparent'
                 }`}
         >
             <div className="container-custom flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${scrolled
-                            ? 'bg-[var(--color-primary)] text-[var(--color-accent)]'
-                            : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white'
+                        ? 'bg-[var(--color-primary)] text-[var(--color-accent)]'
+                        : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white'
                         }`}>
                         CM
                     </div>
@@ -60,8 +60,8 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${scrolled
-                                    ? 'text-[var(--color-text-muted)] hover:text-[var(--color-primary)] hover:bg-gray-50'
-                                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                                ? 'text-[var(--color-text-muted)] hover:text-[var(--color-primary)] hover:bg-gray-50'
+                                : 'text-white/80 hover:text-white hover:bg-white/10'
                                 }`}
                         >
                             {link.name}
@@ -70,7 +70,7 @@ export default function Navbar() {
                     ))}
                     <a
                         href="#contact"
-                        className="ml-4 flex items-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#D4B85A] text-[var(--color-primary)] px-5 py-2.5 rounded-xl font-semibold text-sm shadow-[var(--shadow-gold)] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                        className="ml-4 flex items-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#7EC8E3] text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-[var(--shadow-gold)] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                     >
                         <CalendarCheck size={16} />
                         Agendar Cita
@@ -116,7 +116,7 @@ export default function Navbar() {
                             ))}
                             <a
                                 href="#contact"
-                                className="mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#D4B85A] text-[var(--color-primary)] px-6 py-3 rounded-xl font-semibold text-base"
+                                className="mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#7EC8E3] text-white px-6 py-3 rounded-xl font-semibold text-base"
                                 onClick={() => setIsOpen(false)}
                             >
                                 <CalendarCheck size={18} />

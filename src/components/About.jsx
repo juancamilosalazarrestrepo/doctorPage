@@ -58,10 +58,10 @@ export default function About() {
                             <motion.div
                                 animate={{ y: [0, -6, 0] }}
                                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                                className="absolute top-6 -right-4 z-20 bg-gradient-to-br from-[var(--color-accent)] to-[#D4B85A] rounded-2xl p-4 shadow-[var(--shadow-gold)]"
+                                className="absolute top-6 -right-4 z-20 bg-gradient-to-br from-[var(--color-accent)] to-[#7EC8E3] rounded-2xl p-4 shadow-[var(--shadow-gold)]"
                             >
-                                <p className="text-3xl font-bold text-[var(--color-primary)]">10+</p>
-                                <p className="text-xs font-semibold text-[var(--color-primary)]/70 uppercase tracking-wider">Años</p>
+                                <p className="text-3xl font-bold text-white">10+</p>
+                                <p className="text-xs font-semibold text-white/70 uppercase tracking-wider">Años</p>
                             </motion.div>
                         </div>
                     </motion.div>
@@ -106,7 +106,7 @@ export default function About() {
                                     transition={{ duration: 0.5, delay: i * 0.1 }}
                                     className="flex items-start gap-3 p-4 rounded-2xl bg-[var(--color-bg)] hover:bg-[var(--color-bg-warm)] transition-colors group"
                                 >
-                                    <div className="w-10 h-10 rounded-xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-all shrink-0">
+                                    <div className="w-10 h-10 rounded-xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-white transition-all shrink-0">
                                         {item.icon}
                                     </div>
                                     <div>

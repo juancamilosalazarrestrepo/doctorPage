@@ -74,7 +74,7 @@ export default function Services() {
 
                             <div className="relative z-10">
                                 {/* Icon */}
-                                <div className="w-16 h-16 rounded-2xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] mb-6 group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)] group-hover:to-[#D4B85A] group-hover:text-[var(--color-primary)] transition-all duration-500 group-hover:shadow-[var(--shadow-gold)]">
+                                <div className="w-16 h-16 rounded-2xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] mb-6 group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)] group-hover:to-[#7EC8E3] group-hover:text-white transition-all duration-500 group-hover:shadow-[var(--shadow-gold)]">
                                     {service.icon}
                                 </div>
 

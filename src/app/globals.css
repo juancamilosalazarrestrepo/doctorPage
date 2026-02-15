@@ -7,8 +7,8 @@
 :root {
   --color-primary: #0B1D35;
   --color-secondary: #143D6B;
-  --color-accent: #C9A84C;
-  --color-accent-light: #E8D48B;
+  --color-accent: #4A9BD9;
+  --color-accent-light: #7EC8E3;
   --color-bg: #F7F8FA;
   --color-bg-warm: #FAF8F5;
   --color-text: #1A2332;
@@ -24,7 +24,7 @@
   --shadow-md: 0 4px 20px rgba(11, 29, 53, 0.08);
   --shadow-lg: 0 12px 40px rgba(11, 29, 53, 0.12);
   --shadow-xl: 0 24px 60px rgba(11, 29, 53, 0.16);
-  --shadow-gold: 0 8px 32px rgba(201, 168, 76, 0.25);
+  --shadow-gold: 0 8px 32px rgba(74, 155, 217, 0.25);
 }
 
 * {
@@ -109,11 +109,11 @@ img {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+    box-shadow: 0 0 20px rgba(74, 155, 217, 0.2);
   }
 
   50% {
-    box-shadow: 0 0 40px rgba(201, 168, 76, 0.4);
+    box-shadow: 0 0 40px rgba(74, 155, 217, 0.4);
   }
 }
 
@@ -156,7 +156,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Gold gradient text */
+/* Blue gradient text */
 .text-gradient-gold {
   background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 50%, var(--color-accent) 100%);
   background-size: 200% auto;
