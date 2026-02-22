@@ -1,34 +1,33 @@
 import React from 'react';
-import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, Heart } from 'lucide-react';
+import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, Heart, Activity } from 'lucide-react';
 
 const footerLinks = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Sobre Mí', href: '#about' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Galería', href: '#gallery' },
+    { name: 'Tecnología', href: '#technology' },
+    { name: 'Especialidades', href: '#services' },
+    { name: 'Expertos', href: '#about' },
     { name: 'Contacto', href: '#contact' },
 ];
 
 export default function Footer() {
     return (
-        <footer className="bg-[var(--color-primary)] text-white relative overflow-hidden pt-24 pb-14">
+        <footer className="bg-[var(--color-primary)] text-white relative overflow-hidden pt-24 pb-14 border-t border-[var(--color-accent)]/10">
             {/* Decorative */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent"></div>
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-accent)]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-            <div className="container-custom pt-24 pb-14">
+            <div className="container-custom relative z-10">
                 <div className="grid md:grid-cols-12 gap-12 mb-16">
                     {/* Brand */}
-                    <div className="md:col-span-5">
+                    <div className="md:col-span-12 lg:col-span-4">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 rounded-xl bg-[var(--color-accent)] flex items-center justify-center font-bold text-[var(--color-primary)]">
-                                CM
+                            <div className="w-10 h-10 rounded bg-[var(--color-accent)]/20 border border-[var(--color-accent)]/30 flex items-center justify-center">
+                                <Activity className="text-[var(--color-accent)]" size={24} />
                             </div>
                             <div>
-                                <p className="font-bold text-lg">Dr. Cristian Machado Otero</p>
-                                <p className="text-[var(--color-accent)] text-xs uppercase tracking-widest">Diagnóstico por Imágenes</p>
+                                <h3 className="font-bold text-lg font-[family-name:var(--font-heading)] uppercase tracking-tight">Radiología <span className="text-[var(--color-accent)]">Elite</span></h3>
+                                <p className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest">Diagnóstico Avanzado</p>
                             </div>
                         </div>
-                        <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-sm">
+                        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6 max-w-sm">
                             Comprometido con la precisión diagnóstica y el cuidado integral del paciente,
                             utilizando tecnología de última generación.
                         </p>
@@ -41,7 +40,7 @@ export default function Footer() {
                                 <a
                                     key={i}
                                     href={href}
-                                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:border-transparent transition-all duration-300"
+                                    className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:border-transparent transition-all duration-300"
                                 >
                                     <Icon size={18} />
                                 </a>
@@ -50,55 +49,71 @@ export default function Footer() {
                     </div>
 
                     {/* Links */}
-                    <div className="md:col-span-3">
-                        <h4 className="font-semibold text-sm uppercase tracking-wider text-white/70 mb-6">Navegación</h4>
-                        <ul className="space-y-3">
-                            {footerLinks.map((link) => (
-                                <li key={link.name}>
-                                    <a href={link.href} className="text-white/50 hover:text-[var(--color-accent)] text-sm transition-colors">
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                    <div className="md:col-span-6 lg:col-span-4">
+                        <div className="grid grid-cols-2 gap-8">
+                            <div>
+                                <h4 className="font-semibold text-sm uppercase tracking-wider text-white mb-6">Navegación</h4>
+                                <ul className="space-y-3">
+                                    {footerLinks.map((link) => (
+                                        <li key={link.name}>
+                                            <a href={link.href} className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] text-sm transition-colors block py-1">
+                                                {link.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 className="font-semibold text-sm uppercase tracking-wider text-white mb-6">Legal</h4>
+                                <ul className="space-y-3">
+                                    <li><a href="#" className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] text-sm transition-colors block py-1">Privacidad</a></li>
+                                    <li><a href="#" className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] text-sm transition-colors block py-1">Términos</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Contact */}
-                    <div className="md:col-span-4">
-                        <h4 className="font-semibold text-sm uppercase tracking-wider text-white/70 mb-6">Contacto</h4>
-                        <div className="space-y-4">
-                            <div className="flex items-start gap-3">
-                                <Phone size={16} className="text-[var(--color-accent)] mt-0.5 shrink-0" />
-                                <span className="text-white/50 text-sm">+57 300 123 4567</span>
+                    <div className="md:col-span-6 lg:col-span-4">
+                        <h4 className="font-semibold text-sm uppercase tracking-wider text-white mb-6">Contacto</h4>
+                        <div className="space-y-4 mb-8">
+                            <div className="flex items-start gap-3 group">
+                                <div className="p-2 rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors">
+                                    <Phone size={16} />
+                                </div>
+                                <div>
+                                    <span className="block text-xs text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Teléfono</span>
+                                    <span className="text-white text-sm">+57 300 123 4567</span>
+                                </div>
                             </div>
-                            <div className="flex items-start gap-3">
-                                <Mail size={16} className="text-[var(--color-accent)] mt-0.5 shrink-0" />
-                                <span className="text-white/50 text-sm">contacto@drmachado.com</span>
+                            <div className="flex items-start gap-3 group">
+                                <div className="p-2 rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors">
+                                    <Mail size={16} />
+                                </div>
+                                <div>
+                                    <span className="block text-xs text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Email</span>
+                                    <span className="text-white text-sm">contacto@radiologiaelite.com</span>
+                                </div>
                             </div>
-                            <div className="flex items-start gap-3">
-                                <MapPin size={16} className="text-[var(--color-accent)] mt-0.5 shrink-0" />
-                                <span className="text-white/50 text-sm">Clínica de Especialistas, Cons. 401<br />Bogotá, Colombia</span>
-                            </div>
-                        </div>
-
-                        {/* Hours */}
-                        <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/5">
-                            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">Horarios</p>
-                            <div className="space-y-1 text-sm text-white/50">
-                                <p className="flex justify-between"><span>Lunes - Viernes</span><span className="text-white/70">8:00 - 18:00</span></p>
-                                <p className="flex justify-between"><span>Sábados</span><span className="text-white/70">8:00 - 13:00</span></p>
-                                <p className="flex justify-between"><span>Domingos</span><span className="text-white/40">Cerrado</span></p>
+                            <div className="flex items-start gap-3 group">
+                                <div className="p-2 rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)] group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors">
+                                    <MapPin size={16} />
+                                </div>
+                                <div>
+                                    <span className="block text-xs text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Ubicación</span>
+                                    <span className="text-white text-sm">Clínica de Especialistas, Cons. 401<br />Bogotá, Colombia</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Bottom */}
-                <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <p className="text-white/30 text-xs">
+                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-[var(--color-text-muted)] text-xs">
                         &copy; {new Date().getFullYear()} Dr. Cristian Machado Otero. Todos los derechos reservados.
                     </p>
-                    <p className="text-white/20 text-xs flex items-center gap-1">
+                    <p className="text-[var(--color-text-muted)] text-xs flex items-center gap-1">
                         Hecho con <Heart size={12} className="text-[var(--color-accent)]" /> para la excelencia médica
                     </p>
                 </div>

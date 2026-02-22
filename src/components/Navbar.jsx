@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, CalendarCheck } from 'lucide-react';
+import { Menu, X, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -9,16 +9,15 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 60);
+        const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const navLinks = [
-        { name: 'Inicio', href: '#hero' },
-        { name: 'Sobre Mí', href: '#about' },
-        { name: 'Servicios', href: '#services' },
-        { name: 'Galería', href: '#gallery' },
+        { name: 'Tecnología', href: '#technology' },
+        { name: 'Especialidades', href: '#services' },
+        { name: 'Expertos', href: '#about' },
         { name: 'Contacto', href: '#contact' },
     ];
 
@@ -27,63 +26,44 @@ export default function Navbar() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className={`fixed w-full z-50 transition-all duration-500 ${scrolled
-                ? 'py-3 bg-white/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(11,29,53,0.08)] border-b border-gray-100'
-                : 'py-5 bg-transparent'
+            className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+                ? 'glass border-b border-[var(--color-accent)]/10 py-3'
+                : 'bg-transparent py-6'
                 }`}
         >
             <div className="container-custom flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${scrolled
-                        ? 'bg-[var(--color-primary)] text-[var(--color-accent)]'
-                        : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white'
-                        }`}>
-                        CM
+                    <div className="w-10 h-10 rounded bg-[var(--color-accent)]/20 border border-[var(--color-accent)]/30 flex items-center justify-center">
+                        <Activity className="text-[var(--color-accent)]" size={24} />
                     </div>
-                    <div className="flex flex-col">
-                        <span className={`text-lg font-bold tracking-tight transition-colors duration-300 ${scrolled ? 'text-[var(--color-primary)]' : 'text-white'
-                            }`}>
-                            Dr. Machado
-                        </span>
-                        <span className={`text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${scrolled ? 'text-[var(--color-accent)]' : 'text-[var(--color-accent-light)]'
-                            }`}>
-                            Diagnóstico por Imágenes
-                        </span>
-                    </div>
+                    <h1 className="text-xl font-bold tracking-tight uppercase text-white font-[family-name:var(--font-heading)]">
+                        Radiología <span className="text-[var(--color-accent)]">Elite</span>
+                    </h1>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-1">
+                <div className="hidden lg:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${scrolled
-                                ? 'text-[var(--color-text-muted)] hover:text-[var(--color-primary)] hover:bg-gray-50'
-                                : 'text-white/80 hover:text-white hover:bg-white/10'
-                                }`}
+                            className="text-sm font-medium text-white/80 hover:text-[var(--color-accent)] transition-colors uppercase tracking-wide"
                         >
                             {link.name}
-                            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[var(--color-accent)] rounded-full transition-all duration-300 group-hover:w-6"></span>
                         </Link>
                     ))}
-                    <a
-                        href="#contact"
-                        className="ml-4 flex items-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#7EC8E3] text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-[var(--shadow-gold)] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                    >
-                        <CalendarCheck size={16} />
-                        Agendar Cita
-                    </a>
+                    <button className="bg-[var(--color-accent)] hover:bg-[var(--color-accent)]/80 text-[var(--color-primary)] px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-glow hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]">
+                        AGENDAR CITA
+                    </button>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className={`lg:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-[var(--color-primary)] hover:bg-gray-100' : 'text-white hover:bg-white/10'
-                        }`}
+                    className="lg:hidden p-2 text-white hover:text-[var(--color-accent)] transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
@@ -95,9 +75,9 @@ export default function Navbar() {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-gray-100 shadow-lg"
+                        className="lg:hidden glass-dark border-t border-[var(--color-accent)]/10"
                     >
-                        <div className="flex flex-col p-6 space-y-1">
+                        <div className="flex flex-col p-6 space-y-4">
                             {navLinks.map((link, i) => (
                                 <motion.div
                                     key={link.name}
@@ -107,21 +87,19 @@ export default function Navbar() {
                                 >
                                     <Link
                                         href={link.href}
-                                        className="block py-3 px-4 text-base font-medium text-[var(--color-text)] hover:text-[var(--color-accent)] hover:bg-gray-50 rounded-lg transition-all"
+                                        className="block py-2 text-lg font-medium text-white hover:text-[var(--color-accent)] transition-colors"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.name}
                                     </Link>
                                 </motion.div>
                             ))}
-                            <a
-                                href="#contact"
-                                className="mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--color-accent)] to-[#7EC8E3] text-white px-6 py-3 rounded-xl font-semibold text-base"
+                            <button
+                                className="w-full mt-4 bg-[var(--color-accent)] text-[var(--color-primary)] px-6 py-3 rounded-lg font-bold shadow-glow"
                                 onClick={() => setIsOpen(false)}
                             >
-                                <CalendarCheck size={18} />
-                                Agendar Cita
-                            </a>
+                                AGENDAR CITA
+                            </button>
                         </div>
                     </motion.div>
                 )}
