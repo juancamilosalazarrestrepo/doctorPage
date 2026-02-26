@@ -4,12 +4,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    { src: '/imagen4.jpeg', alt: 'Dr. Machado en su consultorio', caption: 'Consultorio profesional' },
-    { src: '/imagen6.jpeg', alt: 'Dr. Machado', caption: 'Elegancia y profesionalismo' },
-    { src: '/imagen3.jpeg', alt: 'Dr. Machado en la oficina', caption: 'Ambiente de trabajo' },
-    { src: '/imagen8.jpeg', alt: 'Graduación IUC', caption: 'Graduación - Instituto Universitario CEMIC' },
-    { src: '/imagen9.jpeg', alt: 'Ceremonia de graduación', caption: 'Ceremonia de graduación IUC' },
-    { src: '/imagen7.jpeg', alt: 'Dr. Machado con colegas', caption: 'Con colegas del ámbito médico' },
+    { src: '/imagen4.jpeg', alt: 'Dr. Machado en su consultorio', caption: 'Consultorio profesional', position: 'object-center' },
+    { src: '/imagen6.jpeg', alt: 'Dr. Machado', caption: 'Elegancia y profesionalismo', position: 'object-center' },
+    { src: '/imagen3.jpeg', alt: 'Dr. Machado en la oficina', caption: 'Ambiente de trabajo', position: 'object-top' },
+    { src: '/imagen7.jpeg', alt: 'Dr. Machado con colegas', caption: 'Con colegas del ámbito médico', position: 'object-center' },
+    { src: '/doctor3.jpeg', alt: 'Dr. Machado trabajando', caption: 'Excelencia médica', position: 'object-center' },
+    { src: '/doctor5.jpeg', alt: 'Dr. Machado profesional', caption: 'Vanguardia en salud', position: 'object-center' },
+    { src: '/doctor6.jpeg', alt: 'Dr. Machado equipo médico', caption: 'Colaboración profesional', position: 'object-center' },
+    { src: '/doctor4.jpeg', alt: 'Dr. Machado en equipo', caption: 'Compromiso con la salud', position: 'object-center' },
 ];
 
 export default function Gallery() {
@@ -63,7 +65,7 @@ export default function Gallery() {
                             <img
                                 src={img.src}
                                 alt={img.alt}
-                                className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${index === 0 ? 'h-full min-h-[300px] md:min-h-[500px]' : 'h-60 md:h-64'
+                                className={`w-full object-cover ${img.position || 'object-center'} transition-transform duration-700 group-hover:scale-110 ${index === 0 ? 'h-full min-h-[300px] md:min-h-[500px]' : 'h-60 md:h-64'
                                     }`}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

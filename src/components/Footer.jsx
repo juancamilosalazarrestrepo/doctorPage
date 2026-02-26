@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, Heart, Activity } from 'lucide-react';
+import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, Heart, Activity, Stethoscope } from 'lucide-react';
 
 const footerLinks = [
     { name: 'Tecnología', href: '#technology' },
@@ -10,7 +10,7 @@ const footerLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-[var(--color-primary)] text-white relative overflow-hidden pt-24 pb-14 border-t border-[var(--color-accent)]/10">
+        <footer className="bg-[var(--color-primary)] text-white relative overflow-hidden pt-24 pb-14">
             {/* Decorative */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-accent)]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -19,12 +19,19 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="md:col-span-12 lg:col-span-4">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 rounded bg-[var(--color-accent)]/20 border border-[var(--color-accent)]/30 flex items-center justify-center">
-                                <Activity className="text-[var(--color-accent)]" size={24} />
+                            <div className="w-10 h-10 flex items-center justify-center border border-[var(--color-accent)]/80 rounded-lg bg-[var(--color-primary)]/80 backdrop-blur-md shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+                                <Stethoscope className="text-[var(--color-accent)]" size={20} />
                             </div>
-                            <div>
-                                <h3 className="font-bold text-lg font-[family-name:var(--font-heading)] uppercase tracking-tight">Radiología <span className="text-[var(--color-accent)]">Elite</span></h3>
-                                <p className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest">Diagnóstico Avanzado</p>
+                            <div className="flex flex-col">
+                                <div className="leading-none">
+                                    <span className="text-white font-bold text-base tracking-wide font-[family-name:var(--font-heading)] uppercase mr-1">
+                                        Dr. Cristian
+                                    </span>
+                                    <span className="text-[var(--color-accent)] font-bold text-base tracking-wide font-[family-name:var(--font-heading)] uppercase">
+                                        Machado
+                                    </span>
+                                </div>
+                                <span className="text-[var(--color-text-muted)] text-[10px] uppercase tracking-[0.2em]">Diagnóstico Avanzado</span>
                             </div>
                         </div>
                         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6 max-w-sm">

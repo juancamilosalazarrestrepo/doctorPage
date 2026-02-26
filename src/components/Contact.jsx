@@ -28,9 +28,21 @@ const contactInfo = [
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 lg:py-32 bg-white relative overflow-hidden">
-            {/* Decorative */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-accent)]/3 rounded-full blur-[150px]"></div>
+        <section id="contact" className="py-24 lg:py-32 relative overflow-hidden" style={{
+            background: `
+                    radial-gradient(ellipse 80% 50% at 20% 80%, rgba(30, 64, 175, 0.08) 0%, transparent 60%),
+                    radial-gradient(ellipse 60% 80% at 80% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(29, 78, 216, 0.06) 0%, transparent 50%),
+                    linear-gradient(160deg, #020617 0%, #020a1a 30%, #03112a 55%, #020a1a 75%, #020617 100%)
+                `,
+            backgroundAttachment: 'fixed'
+        }}>
+            {/* Animated Wave Blobs */}
+            <div className="absolute inset-0 overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+                <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-[#1e40af]/6 rounded-full blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-[-20%] right-[-10%] w-[700px] h-[700px] bg-[#1d4ed8]/5 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-[30%] right-[20%] w-[400px] h-[400px] bg-[#2563eb]/3 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '4s' }}></div>
+            </div>
 
             <div className="container-custom relative z-10">
                 {/* Header */}
@@ -44,7 +56,7 @@ export default function Contact() {
                     <span className="text-[var(--color-accent)] font-semibold uppercase tracking-[0.15em] text-sm mb-4 block">
                         Contacto
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-6 tracking-tight">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
                         Agenda tu{' '}
                         <span className="text-gradient-gold">Consulta</span>
                     </h2>
@@ -71,13 +83,13 @@ export default function Contact() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="flex items-start gap-4 p-5 rounded-2xl bg-[var(--color-bg)] hover:bg-[var(--color-bg-warm)] transition-colors group"
+                                className="flex items-start gap-4 p-5 rounded-2xl glass hover:bg-white/5 transition-all duration-300 group"
                             >
-                                <div className="w-11 h-11 rounded-xl bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-accent)] group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)] group-hover:to-[#7EC8E3] group-hover:text-white transition-all shrink-0">
+                                <div className="w-11 h-11 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center text-[var(--color-accent)] group-hover:bg-gradient-to-br group-hover:from-[var(--color-accent)] group-hover:to-[#7EC8E3] group-hover:text-[var(--color-primary)] transition-all duration-300 shrink-0">
                                     {info.icon}
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[var(--color-primary)] text-sm mb-1">{info.title}</h4>
+                                    <h4 className="font-semibold text-white text-sm mb-1">{info.title}</h4>
                                     {info.lines.map((line, j) => (
                                         <p key={j} className="text-[var(--color-text-muted)] text-sm">{line}</p>
                                     ))}
@@ -107,8 +119,8 @@ export default function Contact() {
                         transition={{ duration: 0.8 }}
                         className="lg:col-span-3"
                     >
-                        <div className="bg-[var(--color-bg)] rounded-3xl p-8 lg:p-10 shadow-[var(--shadow-sm)] border border-gray-100">
-                            <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-2">
+                        <div className="glass rounded-3xl p-8 lg:p-10 shadow-[var(--shadow-xl)]">
+                            <h3 className="text-2xl font-bold text-white mb-2">
                                 Envíanos un Mensaje
                             </h3>
                             <p className="text-[var(--color-text-muted)] text-sm mb-8">
@@ -121,7 +133,7 @@ export default function Contact() {
                                         <label className="block text-sm font-medium text-[var(--color-text)] mb-2">Nombre</label>
                                         <input
                                             type="text"
-                                            className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm"
+                                            className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white"
                                             placeholder="Tu nombre"
                                         />
                                     </div>
@@ -129,7 +141,7 @@ export default function Contact() {
                                         <label className="block text-sm font-medium text-[var(--color-text)] mb-2">Apellido</label>
                                         <input
                                             type="text"
-                                            className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm"
+                                            className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white"
                                             placeholder="Tu apellido"
                                         />
                                     </div>
@@ -140,7 +152,7 @@ export default function Contact() {
                                         <label className="block text-sm font-medium text-[var(--color-text)] mb-2">Email</label>
                                         <input
                                             type="email"
-                                            className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm"
+                                            className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white"
                                             placeholder="tu@email.com"
                                         />
                                     </div>
@@ -148,7 +160,7 @@ export default function Contact() {
                                         <label className="block text-sm font-medium text-[var(--color-text)] mb-2">Teléfono</label>
                                         <input
                                             type="tel"
-                                            className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm"
+                                            className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white"
                                             placeholder="+57 300..."
                                         />
                                     </div>
@@ -156,13 +168,13 @@ export default function Contact() {
 
                                 <div>
                                     <label className="block text-sm font-medium text-[var(--color-text)] mb-2">Estudio solicitado</label>
-                                    <select className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-[var(--color-text-muted)]">
-                                        <option value="">Selecciona un estudio</option>
-                                        <option>Tomografía Computarizada</option>
-                                        <option>Ultrasonido</option>
-                                        <option>Resonancia Magnética</option>
-                                        <option>Rayos X Digitales</option>
-                                        <option>Otro</option>
+                                    <select className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white/70">
+                                        <option value="" className="bg-[var(--color-secondary)]">Selecciona un estudio</option>
+                                        <option className="bg-[var(--color-secondary)] text-white">Tomografía Computarizada</option>
+                                        <option className="bg-[var(--color-secondary)] text-white">Ultrasonido</option>
+                                        <option className="bg-[var(--color-secondary)] text-white">Resonancia Magnética</option>
+                                        <option className="bg-[var(--color-secondary)] text-white">Rayos X Digitales</option>
+                                        <option className="bg-[var(--color-secondary)] text-white">Otro</option>
                                     </select>
                                 </div>
 
@@ -170,16 +182,16 @@ export default function Contact() {
                                     <label className="block text-sm font-medium text-[var(--color-text)] mb-2">Mensaje</label>
                                     <textarea
                                         rows="4"
-                                        className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm resize-none"
+                                        className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white resize-none"
                                         placeholder="¿En qué podemos ayudarte?"
                                     ></textarea>
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] text-white font-semibold py-4 rounded-xl hover:shadow-[var(--shadow-lg)] hover:-translate-y-0.5 transition-all duration-300"
+                                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#0284c7] to-[#0369a1] text-white font-semibold py-4 rounded-xl border border-white/5 hover:from-[#0369a1] hover:to-[#075985] hover:border-white/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 group"
                                 >
-                                    <Send size={18} />
+                                    <Send size={18} className="text-white/80 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
                                     Enviar Mensaje
                                 </button>
                             </form>

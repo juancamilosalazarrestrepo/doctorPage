@@ -24,10 +24,10 @@ export default function Hero() {
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[120px] animate-pulse"></div>
 
             {/* Content */}
-            <div className="container-custom relative z-10 pt-20">
+            <div className="container-custom relative z-10 pt-20 pb-24 lg:pb-0">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     {/* Left Side: Text Content */}
-                    <div className="max-w-2xl order-2 lg:order-1">
+                    <div className="max-w-2xl order-2 lg:order-1 mb-16 lg:mb-0">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -86,16 +86,16 @@ export default function Hero() {
                         transition={{ duration: 1, delay: 0.4 }}
                         className="relative lg:order-2 order-1"
                     >
-                        <div className="relative group mx-auto max-w-md lg:max-w-none">
+                        <div className="relative group mx-auto max-w-md lg:max-w-none mt-28 lg:mt-0">
                             {/* Decorative Glow */}
                             <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-accent)]/20 to-transparent blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                             {/* Glass Frame */}
                             <div className="relative z-10 rounded-3xl overflow-hidden border border-white/20 glass shadow-2xl p-2">
                                 <img
-                                    src="/imagen9.jpeg"
+                                    src="/doctor4.webp"
                                     alt="Dr. Cristian Machado Otero"
-                                    className="w-full aspect-[4/5] lg:aspect-auto lg:h-[600px] object-cover rounded-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                                    className="w-full aspect-[4/5] lg:aspect-auto lg:h-[500px] object-cover rounded-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
                                 />
                                 {/* Internal Glow/Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/80 via-transparent to-transparent"></div>

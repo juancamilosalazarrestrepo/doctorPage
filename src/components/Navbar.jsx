@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Activity } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? 'glass border-b border-[var(--color-accent)]/10 py-3'
+                ? 'bg-[var(--color-primary)]/90 backdrop-blur-2xl backdrop-saturate-150 shadow-lg shadow-[var(--color-primary)]/40 py-3'
                 : 'bg-transparent py-6'
                 }`}
         >
@@ -35,10 +35,10 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded bg-[var(--color-accent)]/20 border border-[var(--color-accent)]/30 flex items-center justify-center">
-                        <Activity className="text-[var(--color-accent)]" size={24} />
+                        <span className="text-[var(--color-accent)] font-bold text-lg font-[family-name:var(--font-heading)]">CM</span>
                     </div>
-                    <h1 className="text-xl font-bold tracking-tight uppercase text-white font-[family-name:var(--font-heading)]">
-                        Radiología <span className="text-[var(--color-accent)]">Elite</span>
+                    <h1 className="text-xl font-bold tracking-tight uppercase text-white font-[family-name:var(--font-heading)] max-w-[200px] md:max-w-none leading-tight md:leading-normal drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                        Doctor Cristian <span className="text-[var(--color-accent)]">Machado</span>
                     </h1>
                 </Link>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-white/80 hover:text-[var(--color-accent)] transition-colors uppercase tracking-wide"
+                            className="text-sm font-medium text-white/80 hover:text-[var(--color-accent)] transition-colors uppercase tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
                         >
                             {link.name}
                         </Link>

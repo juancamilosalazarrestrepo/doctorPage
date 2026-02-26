@@ -28,9 +28,20 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 bg-[var(--color-primary)] relative overflow-hidden">
-            {/* Background Gradient */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent"></div>
+        <section id="services" className="py-24 relative overflow-hidden" style={{
+            background: `
+                    radial-gradient(ellipse 80% 50% at 80% 20%, rgba(30, 64, 175, 0.08) 0%, transparent 60%),
+                    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                    radial-gradient(ellipse 100% 60% at 50% 0%, rgba(29, 78, 216, 0.06) 0%, transparent 50%),
+                    linear-gradient(200deg, #020617 0%, #020a1a 30%, #03112a 50%, #020a1a 70%, #020617 100%)
+                `,
+            backgroundAttachment: 'fixed'
+        }}>
+            {/* Animated Wave Blobs */}
+            <div className="absolute inset-0 overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+                <div className="absolute top-[-15%] right-[-10%] w-[500px] h-[500px] bg-[#1e40af]/8 rounded-full blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-[-15%] left-[-10%] w-[600px] h-[600px] bg-[#1d4ed8]/6 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '3s' }}></div>
+            </div>
 
             <div className="container-custom relative z-10">
                 <div className="text-center mb-16">
