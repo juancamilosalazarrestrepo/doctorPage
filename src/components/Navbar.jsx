@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Stethoscope } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -15,10 +15,10 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: 'Tecnología', href: '#technology' },
-        { name: 'Especialidades', href: '#services' },
-        { name: 'Expertos', href: '#about' },
-        { name: 'Contacto', href: '#contact' },
+        { name: 'Especialidades', href: '/#services' },
+        { name: 'Certificaciones', href: '/certificaciones' },
+        { name: 'Publicaciones', href: '/publicaciones' },
+        { name: 'Contacto', href: '/#contact' },
     ];
 
     return (
@@ -34,12 +34,20 @@ export default function Navbar() {
             <div className="container-custom flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded bg-[var(--color-accent)]/20 border border-[var(--color-accent)]/30 flex items-center justify-center">
-                        <span className="text-[var(--color-accent)] font-bold text-lg font-[family-name:var(--font-heading)]">CM</span>
+                    <div className="w-10 h-10 flex items-center justify-center border border-[var(--color-accent)]/80 rounded-lg bg-[var(--color-primary)]/80 backdrop-blur-md shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+                        <Stethoscope className="text-[var(--color-accent)]" size={20} />
                     </div>
-                    <h1 className="text-xl font-bold tracking-tight uppercase text-white font-[family-name:var(--font-heading)] max-w-[200px] md:max-w-none leading-tight md:leading-normal drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                        Doctor Cristian <span className="text-[var(--color-accent)]">Machado</span>
-                    </h1>
+                    <div className="flex flex-col justify-center">
+                        <div className="leading-tight">
+                            <span className="text-white font-bold text-sm md:text-base tracking-wide font-[family-name:var(--font-heading)] uppercase mr-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                                Dr. Cristian
+                            </span>
+                            <span className="text-[var(--color-accent)] font-bold text-sm md:text-base tracking-wide font-[family-name:var(--font-heading)] uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                                Machado
+                            </span>
+                        </div>
+                        <span className="text-[var(--color-text-muted)] text-[9px] md:text-[10px] uppercase tracking-[0.2em] leading-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">Diagnóstico Avanzado</span>
+                    </div>
                 </Link>
 
                 {/* Desktop Navigation */}

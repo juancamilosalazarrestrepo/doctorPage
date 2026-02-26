@@ -189,9 +189,17 @@ export default function Contact() {
 
                                 <button
                                     type="submit"
-                                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#0284c7] to-[#0369a1] text-white font-semibold py-4 rounded-xl border border-white/5 hover:from-[#0369a1] hover:to-[#075985] hover:border-white/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 group"
+                                    className="w-full flex items-center justify-center gap-2 text-white font-semibold py-4 rounded-xl border-none hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:-translate-y-0.5 transition-all duration-500 group"
+                                    style={{
+                                        backgroundImage: 'linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 40%, #3b82f6 60%, #1e40af 100%)',
+                                        backgroundSize: '200% 200%',
+                                        backgroundPosition: '0% 50%',
+                                        transition: 'all 0.5s ease',
+                                    }}
+                                    onMouseEnter={e => e.currentTarget.style.backgroundPosition = '100% 50%'}
+                                    onMouseLeave={e => e.currentTarget.style.backgroundPosition = '0% 50%'}
                                 >
-                                    <Send size={18} className="text-white/80 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
+                                    <Send size={18} className="text-white/90 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
                                     Enviar Mensaje
                                 </button>
                             </form>

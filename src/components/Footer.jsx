@@ -2,10 +2,10 @@ import React from 'react';
 import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, Heart, Activity, Stethoscope } from 'lucide-react';
 
 const footerLinks = [
-    { name: 'Tecnología', href: '#technology' },
-    { name: 'Especialidades', href: '#services' },
-    { name: 'Expertos', href: '#about' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Especialidades', href: '/#services' },
+    { name: 'Certificaciones', href: '/certificaciones' },
+    { name: 'Publicaciones', href: '/publicaciones' },
+    { name: 'Contacto', href: '/#contact' },
 ];
 
 export default function Footer() {
