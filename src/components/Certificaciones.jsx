@@ -22,37 +22,37 @@ const academicDegrees = [
 
 const certifications = [
     {
-        image: '/cert_ecografia.png',
+        image: '/cert_ecografia.webp',
         title: 'Certificación en Ecografía Abdominal',
         institution: 'Sociedad Colombiana de Radiología',
         year: '2012',
     },
     {
-        image: '/cert_tomografia.png',
+        image: '/cert_tomografia.webp',
         title: 'Diplomado en Tomografía Multicorte',
         institution: 'Universidad de los Andes',
         year: '2013',
     },
     {
-        image: '/cert_resonancia.png',
+        image: '/cert_resonancia.webp',
         title: 'Certificación en Resonancia Magnética Avanzada',
         institution: 'RSNA',
         year: '2014',
     },
     {
-        image: '/cert_medicina.png',
+        image: '/cert_medicina.webp',
         title: 'Diplomado en Intervencionismo Guiado por Imagen',
         institution: 'Hospital Universitario San Ignacio',
         year: '2016',
     },
     {
-        image: '/cert_radiologia.png',
+        image: '/cert_radiologia.webp',
         title: 'Certificación en Ecografía Obstétrica',
         institution: 'ISUOG',
         year: '2017',
     },
     {
-        image: '/cert_fellowship.png',
+        image: '/cert_fellowship.webp',
         title: 'IA Aplicada a Radiología',
         institution: 'ACR - American College of Radiology',
         year: '2023',

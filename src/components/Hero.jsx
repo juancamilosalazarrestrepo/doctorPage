@@ -10,7 +10,7 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/banner1.jpg"
+                    src="/banner1.webp"
                     alt="Diagnostic Imaging Background"
                     className="w-full h-full object-cover opacity-60"
                 />

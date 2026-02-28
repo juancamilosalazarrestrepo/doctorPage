@@ -23,7 +23,7 @@ export default function About() {
                             {/* Main Image Frame with Glass Effect */}
                             <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 glass">
                                 <img
-                                    src="/imagen9.jpeg"
+                                    src="/imagen9.webp"
                                     alt="Dr. Cristian Machado Otero"
                                     className="w-full h-[600px] object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-500"
                                 />

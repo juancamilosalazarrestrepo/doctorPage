@@ -4,14 +4,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    { src: '/imagen4.jpeg', alt: 'Dr. Machado en su consultorio', caption: 'Consultorio profesional', position: 'object-center' },
-    { src: '/imagen3.jpeg', alt: 'Dr. Machado en la oficina', caption: 'Ambiente de trabajo', position: 'object-top' },
-    { src: '/doctor3.jpeg', alt: 'Dr. Machado trabajando', caption: 'Excelencia médica', position: 'object-center' },
-    { src: '/doctor5.jpeg', alt: 'Dr. Machado profesional', caption: 'Vanguardia en salud', position: 'object-center' },
-    { src: '/imagen7.jpeg', alt: 'Dr. Machado con colegas', caption: 'Con colegas del ámbito médico', position: 'object-center' },
-    { src: '/doctor6.jpeg', alt: 'Dr. Machado equipo médico', caption: 'Colaboración profesional', position: 'object-center' },
-    { src: '/imagen6.jpeg', alt: 'Dr. Machado', caption: 'Elegancia y profesionalismo', position: 'object-center' },
-    { src: '/doctor4.jpeg', alt: 'Dr. Machado en equipo', caption: 'Compromiso con la salud', position: 'object-center' },
+    { src: '/imagen4.webp', alt: 'Dr. Machado en su consultorio', caption: 'Consultorio profesional', position: 'object-center' },
+    { src: '/imagen3.webp', alt: 'Dr. Machado en la oficina', caption: 'Ambiente de trabajo', position: 'object-top' },
+    { src: '/doctor3.webp', alt: 'Dr. Machado trabajando', caption: 'Excelencia médica', position: 'object-center' },
+    { src: '/doctor5.webp', alt: 'Dr. Machado profesional', caption: 'Vanguardia en salud', position: 'object-center' },
+    { src: '/imagen7.webp', alt: 'Dr. Machado con colegas', caption: 'Con colegas del ámbito médico', position: 'object-center' },
+    { src: '/doctor6.webp', alt: 'Dr. Machado equipo médico', caption: 'Colaboración profesional', position: 'object-center' },
+    { src: '/imagen6.webp', alt: 'Dr. Machado', caption: 'Elegancia y profesionalismo', position: 'object-center' },
+    { src: '/doctor4.webp', alt: 'Dr. Machado en equipo', caption: 'Compromiso con la salud', position: 'object-center' },
 ];
 
 export default function Gallery() {

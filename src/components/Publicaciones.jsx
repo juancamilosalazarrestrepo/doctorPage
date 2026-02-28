@@ -8,13 +8,13 @@ const featuredArticle = {
     title: 'Avances en Inteligencia Artificial aplicada al Diagnóstico por Imagen: Revisión Sistemática',
     journal: 'Revista Colombiana de Radiología, Vol. 34, No. 2, 2023',
     abstract: 'Este artículo analiza los últimos avances en algoritmos de aprendizaje profundo aplicados a la detección temprana de patologías en imágenes médicas, incluyendo tomografía computarizada y resonancia magnética. Se evaluaron 47 estudios publicados entre 2019 y 2023, demostrando una mejora significativa en la precisión diagnóstica cuando se integran herramientas de IA en el flujo de trabajo radiológico.',
-    image: '/article_ai_radiology.png',
+    image: '/article_ai_radiology.webp',
     tags: ['Inteligencia Artificial', 'Deep Learning', 'Diagnóstico'],
 };
 
 const articles = [
     {
-        image: '/article_doppler.png',
+        image: '/article_doppler.webp',
         title: 'Ecografía Doppler en la detección de trombosis venosa profunda',
         journal: 'Biomédica',
         year: '2018',
@@ -22,7 +22,7 @@ const articles = [
         description: 'Evaluación prospectiva del rendimiento diagnóstico de la ecografía Doppler color en pacientes con sospecha clínica de TVP en extremidades inferiores.',
     },
     {
-        image: '/article_ct_trauma.png',
+        image: '/article_ct_trauma.webp',
         title: 'Protocolo optimizado de TC multicorte para trauma abdominal',
         journal: 'Revista Radiología',
         year: '2019',
@@ -30,7 +30,7 @@ const articles = [
         description: 'Propuesta de un protocolo de adquisición rápida con menor dosis de radiación manteniendo la sensibilidad diagnóstica en trauma cerrado.',
     },
     {
-        image: '/article_mri_brain.png',
+        image: '/article_mri_brain.webp',
         title: 'Resonancia magnética funcional en evaluación de ACV',
         journal: 'Acta Médica Colombiana',
         year: '2020',
@@ -38,7 +38,7 @@ const articles = [
         description: 'Análisis del valor predictivo de secuencias de difusión y perfusión en la evaluación del penumbra isquémica en pacientes con ACV agudo.',
     },
     {
-        image: '/article_3d_prenatal.png',
+        image: '/article_3d_prenatal.webp',
         title: 'Avances en ecografía 3D para diagnóstico prenatal',
         journal: 'Revista de Ginecología',
         year: '2021',
@@ -46,7 +46,7 @@ const articles = [
         description: 'Revisión de las nuevas capacidades de la ecografía 3D/4D en la detección de malformaciones congénitas durante el segundo trimestre.',
     },
     {
-        image: '/article_biopsy.png',
+        image: '/article_biopsy.webp',
         title: 'Papel de la imagen guiada en biopsias percutáneas',
         journal: 'Colombian Journal of Radiology',
         year: '2022',
@@ -54,7 +54,7 @@ const articles = [
         description: 'Experiencia institucional con biopsias guiadas por TC y ecografía en lesiones hepáticas, renales y pulmonares sospechosas.',
     },
     {
-        image: '/article_lung_ct.png',
+        image: '/article_lung_ct.webp',
         title: 'TC de baja dosis en screening pulmonar: Experiencia institucional',
         journal: 'Archivos de Medicina',
         year: '2023',
