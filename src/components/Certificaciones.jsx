@@ -8,22 +8,17 @@ const academicDegrees = [
     {
         icon: <GraduationCap size={32} />,
         title: 'Médico Cirujano',
-        institution: 'Universidad Nacional de Colombia',
-        year: '2005',
+        institution: 'Universidad del Sinú (Unisinú)',
+        year: '2019',
     },
     {
         icon: <Cross size={32} />,
-        title: 'Especialista en Radiología e Imágenes Diagnósticas',
-        institution: 'Universidad del Rosario',
-        year: '2009',
-    },
-    {
-        icon: <HeartPulse size={32} />,
-        title: 'Fellow en Imagen Cardiovascular',
-        institution: 'Cleveland Clinic',
-        year: '2011',
+        title: 'Especialista en Diagnóstico por Imágenes',
+        institution: 'Universidad de Buenos Aires',
+        year: '2025',
     },
 ];
+
 
 const certifications = [
     {

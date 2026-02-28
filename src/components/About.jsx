@@ -43,10 +43,10 @@ export default function About() {
                             >
                                 <div className="flex items-center gap-3 mb-2">
                                     <Award className="text-[var(--color-accent)]" size={24} />
-                                    <span className="text-white font-bold text-lg">15+ Años</span>
+                                    <span className="text-white font-bold text-lg">Especialista</span>
                                 </div>
                                 <p className="text-[var(--color-text-muted)] text-xs leading-relaxed">
-                                    Trayectoria de excelencia en diagnóstico médico avanzado.
+                                    Diagnóstico médico avanzado con excelencia académica y humana.
                                 </p>
                             </motion.div>
                         </div>
@@ -63,8 +63,8 @@ export default function About() {
                         </div>
 
                         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 font-[family-name:var(--font-heading)] leading-tight">
-                            Excellence in <br />
-                            <span className="text-gradient-cyan">Medical Imaging</span>
+                            Excelencia en <br />
+                            <span className="text-gradient-cyan">Imagenología Médica</span>
                         </h2>
 
                         <div className="space-y-6 text-[var(--color-text-muted)] text-lg leading-relaxed mb-10">

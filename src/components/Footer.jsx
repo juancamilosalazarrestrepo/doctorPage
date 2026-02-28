@@ -90,7 +90,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <span className="block text-xs text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Teléfono</span>
-                                    <span className="text-white text-sm">+57 300 123 4567</span>
+                                    <span className="text-white text-sm">+54 9 11 5665-5559</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 group">
@@ -99,7 +99,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <span className="block text-xs text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Email</span>
-                                    <span className="text-white text-sm">contacto@radiologiaelite.com</span>
+                                    <span className="text-white text-sm">drcristianmachado@gmail.com</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 group">
@@ -108,7 +108,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <span className="block text-xs text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Ubicación</span>
-                                    <span className="text-white text-sm">Clínica de Especialistas, Cons. 401<br />Bogotá, Colombia</span>
+                                    <span className="text-white text-sm">Puerto Madero, Buenos Aires</span>
                                 </div>
                             </div>
                         </div>

@@ -7,17 +7,17 @@ const contactInfo = [
     {
         icon: <MapPin size={20} />,
         title: 'Ubicación',
-        lines: ['Clínica de Especialistas', 'Consultorio 401, Bogotá'],
+        lines: ['Puerto Madero', 'Buenos Aires'],
     },
     {
         icon: <Phone size={20} />,
         title: 'Teléfono',
-        lines: ['+57 300 123 4567'],
+        lines: ['+54 9 11 5665-5559'],
     },
     {
         icon: <Mail size={20} />,
         title: 'Email',
-        lines: ['contacto@drmachado.com'],
+        lines: ['drcristianmachado@gmail.com'],
     },
     {
         icon: <Clock size={20} />,
@@ -100,7 +100,7 @@ export default function Contact() {
                         {/* Map */}
                         <div className="w-full h-52 rounded-2xl overflow-hidden shadow-[var(--shadow-md)] border border-gray-100">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.787729864239!2d-74.05370422525703!3d4.632007895342805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3c3d3d3d3d%3A0x3d3d3d3d3d3d3d3d!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1699999999999!5m2!1ses!2sco"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44367005141!2d-58.433298450000005!3d-34.61566245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
@@ -161,7 +161,7 @@ export default function Contact() {
                                         <input
                                             type="tel"
                                             className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 outline-none transition-all text-sm text-white"
-                                            placeholder="+57 300..."
+                                            placeholder="+54 9 11..."
                                         />
                                     </div>
                                 </div>
