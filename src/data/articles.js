@@ -7,8 +7,8 @@ export const articlesData = [
         category: 'Radiología',
         description: 'Análisis detallado de los hallazgos imagenológicos característicos que permiten diferenciar la colecistitis xantogranulomatosa de otras patologías vesiculares.',
         abstract: 'La colecistitis xantogranulomatosa es una variante infrecuente de inflamación crónica de la vesícula biliar. Este artículo profundiza en las características radiológicas clave evidenciadas en tomografía y ecografía, facilitando un diagnóstico diferencial preciso, crucial para evitar intervenciones quirúrgicas innecesariamente agresivas por sospecha de malignidad.',
-        image: '/article_ai_radiology.webp',
-        banner: '/article_ai_radiology.webp',
+        image: '/article_doppler.webp',
+        banner: '/article_doppler.webp',
         tags: ['Tomografía', 'Ecografía', 'Vesícula biliar'],
         link: 'https://www.scielo.org.ar/pdf/rar/v88n1/1852-9992-rar-88-1-31.pdf'
     },
