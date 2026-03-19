@@ -1,0 +1,80 @@
+export const articlesData = [
+    {
+        slug: 'colecistitis-xantogranulomatosa',
+        title: 'Hallazgos imagenológicos distintivos de la colecistitis xantogranulomatosa',
+        journal: 'Revista Argentina de Radiología',
+        year: '2024',
+        category: 'Radiología',
+        description: 'Análisis detallado de los hallazgos imagenológicos característicos que permiten diferenciar la colecistitis xantogranulomatosa de otras patologías vesiculares.',
+        abstract: 'La colecistitis xantogranulomatosa es una variante infrecuente de inflamación crónica de la vesícula biliar. Este artículo profundiza en las características radiológicas clave evidenciadas en tomografía y ecografía, facilitando un diagnóstico diferencial preciso, crucial para evitar intervenciones quirúrgicas innecesariamente agresivas por sospecha de malignidad.',
+        image: '/article_ai_radiology.webp',
+        banner: '/article_ai_radiology.webp',
+        tags: ['Tomografía', 'Ecografía', 'Vesícula biliar'],
+        link: 'https://www.scielo.org.ar/pdf/rar/v88n1/1852-9992-rar-88-1-31.pdf'
+    },
+    {
+        slug: 'diverticulitis-de-meckel',
+        title: 'Diverticulitis de Meckel, una causa poco frecuente de abdomen agudo',
+        journal: 'ResearchGate',
+        year: '2023',
+        category: 'Gastrointestinal',
+        description: 'Reporte de caso y revisión de literatura sobre la diverticulitis de Meckel como etiología atípica en el diagnóstico de abdomen agudo.',
+        abstract: 'La presentación clínica del divertículo de Meckel complicado puede mimetizar otras causas comunes de abdomen agudo, como la apendicitis. Este documento presenta una revisión exhaustiva de la literatura apoyada por casuística, destacando el rol de las imágenes diagnósticas en la identificación temprana y el manejo oportuno.',
+        image: '/article_doppler.webp',
+        banner: '/article_doppler.webp',
+        tags: ['Abdomen Agudo', 'Gastrointestinal', 'Casuística'],
+        link: 'https://www.researchgate.net/publication/373043632_Casuistica_DIVERTICULITIS_DE_MECKEL_UNA_CAUSA_POCO_FRECUENTE_DE_ABDOMEN_AGUDO'
+    },
+    {
+        slug: 'bursitis-retrocalcanea',
+        title: 'Detrás del dolor: bursitis retrocalcánea',
+        journal: 'Medicina (Buenos Aires)',
+        year: '2024',
+        category: 'Musculoesquelético',
+        description: 'Estudio enfocado en el diagnóstico por imagen de la bursitis retrocalcánea, una causa significativa de talalgia.',
+        abstract: 'La bursitis retrocalcánea es una patología inflamatoria que afecta la bolsa sinovial ubicada entre el calcáneo y el tendón de Aquiles. El artículo examina la utilidad de la resonancia magnética y el ultrasonido para caracterizar el grado de inflamación y orientar el enfoque terapéutico.',
+        image: '/article_ct_trauma.webp',
+        banner: '/article_ct_trauma.webp',
+        tags: ['RM', 'Ultrasonido', 'Talalgia'],
+        link: 'https://www.medicinabuenosaires.com/PMID/39399955.pdf'
+    },
+    {
+        slug: 'hipertrofia-lipomatosa',
+        title: 'Hipertrofia lipomatosa del septum interatrial',
+        journal: 'Medicina (Buenos Aires)',
+        year: '2023',
+        category: 'Cardiovascular',
+        description: 'Caracterización de la hipertrofia lipomatosa del septum interatrial mediante modalidades de imagen cardiovascular.',
+        abstract: 'La hipertrofia lipomatosa del septum interatrial es una entidad benigna caracterizada por el depósito de grasa no encapsulada. El estudio subraya la importancia de la tomografía computarizada y la ecocardiografía para diferenciar esta condición de las neoplasias cardíacas, evitando así procedimientos invasivos.',
+        image: '/article_mri_brain.webp',
+        banner: '/article_mri_brain.webp',
+        tags: ['Cardiovascular', 'Imagen', 'Septum'],
+        link: 'https://www.scielo.org.ar/pdf/medba/v83n6/1669-9106-medba-83-06-1032.pdf'
+    },
+    {
+        slug: 'diu-migrado-cavidad-abdominal',
+        title: 'Dispositivo intrauterino migrado a la cavidad abdominal',
+        journal: 'Medicina (Buenos Aires)',
+        year: '2024',
+        category: 'Ginecología e Imágenes',
+        description: 'Reporte sobre la migración de un dispositivo intrauterino a la cavidad abdominal y su evaluación imagenológica.',
+        abstract: 'La perforación uterina y posterior migración del dispositivo intrauterino (DIU) es una complicación rara. Este documento ilustra el rol fundamental de las imágenes diagnósticas, tales como la ecografía y la tomografía, para la localización precisa del dispositivo ectópico.',
+        image: '/article_biopsy.webp',
+        banner: '/article_biopsy.webp',
+        tags: ['DIU', 'Ecografía', 'Tomografía'],
+        link: 'https://www.medicinabuenosaires.com/revistas/vol86-26/n1/270.pdf'
+    },
+    {
+        slug: 'nonaneurysmal-perimesencephalic-sh',
+        title: 'Nonaneurysmal perimesencephalic subarachnoid haemorrhage',
+        journal: 'Eurorad',
+        year: '2023',
+        category: 'Neurorradiología',
+        description: 'Caso clínico detallado sobre hemorragia subaracnoidea perimesencefálica no aneurismática.',
+        abstract: 'La hemorragia subaracnoidea perimesencefálica (HSAP) no aneurismática representa una variante benigna de hemorragia subaracnoidea. Este caso clínico en Eurorad ilustra los patrones de sangrado característicos y el protocolo diagnóstico necesario para excluir patología vascular subyacente.',
+        image: '/article_lung_ct.webp',
+        banner: '/article_lung_ct.webp',
+        tags: ['Neurorradiología', 'Eurorad', 'Hemorragia'],
+        link: 'https://www.eurorad.org/case/18187'
+    }
+];

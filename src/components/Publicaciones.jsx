@@ -3,65 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, FileText, ArrowRight, ExternalLink, Quote, BarChart3, Globe, Users, Presentation } from 'lucide-react';
 import Link from 'next/link';
+import { articlesData } from '../data/articles';
 
-const featuredArticle = {
-    title: 'Avances en Inteligencia Artificial aplicada al Diagnóstico por Imagen: Revisión Sistemática',
-    journal: 'Revista Colombiana de Radiología, Vol. 34, No. 2, 2023',
-    abstract: 'Este artículo analiza los últimos avances en algoritmos de aprendizaje profundo aplicados a la detección temprana de patologías en imágenes médicas, incluyendo tomografía computarizada y resonancia magnética. Se evaluaron 47 estudios publicados entre 2019 y 2023, demostrando una mejora significativa en la precisión diagnóstica cuando se integran herramientas de IA en el flujo de trabajo radiológico.',
-    image: '/article_ai_radiology.webp',
-    tags: ['Inteligencia Artificial', 'Deep Learning', 'Diagnóstico'],
-};
-
-const articles = [
-    {
-        image: '/article_doppler.webp',
-        title: 'Ecografía Doppler en la detección de trombosis venosa profunda',
-        journal: 'Biomédica',
-        year: '2018',
-        category: 'Ultrasonido',
-        description: 'Evaluación prospectiva del rendimiento diagnóstico de la ecografía Doppler color en pacientes con sospecha clínica de TVP en extremidades inferiores.',
-    },
-    {
-        image: '/article_ct_trauma.webp',
-        title: 'Protocolo optimizado de TC multicorte para trauma abdominal',
-        journal: 'Revista Radiología',
-        year: '2019',
-        category: 'Tomografía',
-        description: 'Propuesta de un protocolo de adquisición rápida con menor dosis de radiación manteniendo la sensibilidad diagnóstica en trauma cerrado.',
-    },
-    {
-        image: '/article_mri_brain.webp',
-        title: 'Resonancia magnética funcional en evaluación de ACV',
-        journal: 'Acta Médica Colombiana',
-        year: '2020',
-        category: 'Resonancia',
-        description: 'Análisis del valor predictivo de secuencias de difusión y perfusión en la evaluación del penumbra isquémica en pacientes con ACV agudo.',
-    },
-    {
-        image: '/article_3d_prenatal.webp',
-        title: 'Avances en ecografía 3D para diagnóstico prenatal',
-        journal: 'Revista de Ginecología',
-        year: '2021',
-        category: 'Obstetricia',
-        description: 'Revisión de las nuevas capacidades de la ecografía 3D/4D en la detección de malformaciones congénitas durante el segundo trimestre.',
-    },
-    {
-        image: '/article_biopsy.webp',
-        title: 'Papel de la imagen guiada en biopsias percutáneas',
-        journal: 'Colombian Journal of Radiology',
-        year: '2022',
-        category: 'Intervencionismo',
-        description: 'Experiencia institucional con biopsias guiadas por TC y ecografía en lesiones hepáticas, renales y pulmonares sospechosas.',
-    },
-    {
-        image: '/article_lung_ct.webp',
-        title: 'TC de baja dosis en screening pulmonar: Experiencia institucional',
-        journal: 'Archivos de Medicina',
-        year: '2023',
-        category: 'Tomografía',
-        description: 'Resultados de un programa piloto de tamizaje de cáncer pulmonar mediante tomografía de baja dosis en población de alto riesgo.',
-    },
-];
+const featuredArticle = articlesData[0];
+const articles = articlesData.slice(1);
 
 const stats = [
     { icon: <FileText size={24} />, number: '25+', label: 'Artículos Publicados' },
@@ -175,10 +120,10 @@ export default function Publicaciones() {
                                         {featuredArticle.abstract}
                                     </p>
                                 </div>
-                                <button className="bg-[var(--color-accent)] text-[var(--color-primary)] px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-glow w-fit">
+                                <Link href={`/publicaciones/${featuredArticle.slug}`} className="bg-[var(--color-accent)] text-[var(--color-primary)] px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-glow w-fit">
                                     Leer Artículo Completo
                                     <ArrowRight size={18} />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
@@ -243,10 +188,10 @@ export default function Publicaciones() {
                                         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4 line-clamp-2">
                                             {article.description}
                                         </p>
-                                        <a href="#" className="inline-flex items-center text-[var(--color-accent)] text-sm font-bold uppercase tracking-wider hover:gap-2 transition-all group-hover:gap-2">
+                                        <Link href={`/publicaciones/${article.slug}`} className="inline-flex items-center text-[var(--color-accent)] text-sm font-bold uppercase tracking-wider hover:gap-2 transition-all group-hover:gap-2">
                                             Leer más
                                             <ArrowRight size={14} className="ml-1" />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </motion.div>
